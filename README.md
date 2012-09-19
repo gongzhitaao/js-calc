@@ -1,7 +1,7 @@
-Javascript Caculator
+Javascript Calculator
 ====================
 
-A caculator implemented in javascript.
+A calculator implemented in javascript.
 
 Feature
 -------
