@@ -1,0 +1,57 @@
+
+/*--------------------------------------------------------------------
+ * STANDARD ELEMENTS
+ *--------------------------------------------------------------------
+ */
+
+body {
+    background-image:url('../images/logo.png');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:70% 60%;
+    font:normal normal normal 15px/20px 'DejaVu Sans Mono','Sans Mono';
+    margin:20px auto; width: 90% }
+table { border-collapse:collapse; text-align:center;
+	verticle-align:middle }
+
+/*--------------------------------------------------------------------
+ * CUSTOM ELEMENTS
+ *--------------------------------------------------------------------
+ */
+
+.group:before, .group:after {
+    content:"\0020"; display:block; height:0; visibility:hidden }
+.group:after { clear:both }
+
+#bg { float:left; z-index:-1 }
+
+#main-wrapper { z-index:2 }
+
+#input {
+    margin-bottom:20px; padding:8px 0; text-align:center; width:100% }
+
+#calc-control { float:left; width:20%; margin-right:5% }
+#calc-control button { height:100%; width:100% }
+#calc-control table, #calc-log table { width:100% }
+table caption { text-align:left }
+#calc-control td {
+    text-align:center; height:40px; verticle-align:middle; width:24%}
+
+#calc-log { float:right; width:75%; }
+#running-result {
+    border-bottom:1px dotted black; padding:5px 0; width:100% }
+#memory { padding:5px 0}
+ { rules:cols }
+
+.log-index { width:60px }
+.log-result { width:250px }
+.log-index, .log-result, .log-equation {
+    border:1px dotted orange; border-width:0 1px; padding:5px 0 }
+#memory caption { padding:5px 0}
+#memory thead {
+    color:ghostwhite; background-color:rgba(167,201,66,1); font-weight:bold }
+#memory .odd { background-color:rgba(234,242,211,.6); }
+#memory .even { background-color: }
+.log-entry:hover { border:2px solid rgba(152,191,33,.5); border:2px 2px; }
+
+.memop:hover { cursor:pointer }

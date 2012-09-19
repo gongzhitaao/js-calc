@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <head>
+    <meta charset="utf-8">
+
+    <base href="." />
+
+    <link rel="stylesheet" href="css/jqmath-0.2.0.css">
+    <link rel="stylesheet" href="css/tip-yellow.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <div id="main-wrapper" class="group">
+
+      <div class="user-input">
+        <input id="input" type="text"></input>
+      </div>
+
+      <div id="calc-control">
+        <div id="ctrl-basic">
+          <table>
+            <caption>基本功能</caption>
+            <tbody>
+              <tr>
+                <td><button type="button" class="num">7</button></td>
+                <td><button type="button" class="num">8</button></td>
+                <td><button type="button" class="num">9</button></td>
+                <td><button type="button" id="remember">REM</button></td>
+              </tr>
+              <tr>
+                <td><button type="button" class="num">4</button></td>
+                <td><button type="button" class="num">5</button></td>
+                <td><button type="button" class="num">6</button></td>
+		<td rowspan="2"><button type="button" id="equal">=</button></td>
+              </tr>
+              <tr>
+                <td><button type="button" class="num">1</button></td>
+                <td><button type="button" class="num">2</button></td>
+                <td><button type="button" class="num">3</button></td>
+              </tr>
+              <tr>
+                <td><button type="button" class="num">0</button></td>
+                <td><button type="button" class="num">.</button></td>
+                <td><button type="button" id="rand">RND</button></td>
+                <td rowspan="2"><button type="button" id="ans">ANS</button></td>
+              </tr>
+              <tr>
+                <td><button type="button" class="op">+</button></td>
+                <td><button type="button" class="op">-</button></td>
+                <td><button type="button" class="op">(</button></td>
+              </tr>
+              <tr>
+                <td><button type="button" class="op">*</button></td>
+                <td><button type="button" class="op">/</button></td>
+                <td><button type="button" class="op">)</button></td>
+                <td><button type="button" id="clr">CLR</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- ctrl-number -->
+        <div id="ctrl-advanced">
+          <table>
+            <caption>高级功能</caption>
+            <tbody>
+              <tr>
+                <td><button type="button" value="E^{}" class="func">$e^x$</button></td>
+                <td><button type="button" value="^{}" class="func">$x^y$</button></td>
+                <td><button type="button" id="root" value="{^{ }√( )}" class="func">$^x√y$</button></td>
+                <td><button type="button" value="||" class="func">$|x|$</button></td>
+              </tr>
+              <tr>
+                <td><button type="button" value="ln()" class="func">$ln$</button></td>
+                <td><button type="button" value="log_2()" class="func">$log_2$</button></td>
+                <td><button type="button" value="log_{10}()" class="func">$log_{10}$</button></td>
+              </tr>
+              <tr>
+                <td><button type="button" value="sin()" class="func trig">$sin$</button></td>
+                <td><button type="button" value="cos()" class="func trig">$cos$</button></td>
+                <td><button type="button" value="tan()" class="func trig">$tan$</button></td>
+              </tr>
+              <tr>
+                <td><button type="button" value="asin()" class="func inv-trig">$asin$</button></td>
+                <td><button type="button" value="acos()" class="func inv-trig">$acos$</button></td>
+                <td><button type="button" value="atan()" class="func inv-trig">$atan$</button></td>
+              </tr>
+          </tbody>
+          </table>
+        </div> <!-- ctrl-operator -->
+        <div id="ctrl-constant" class="group">
+          <table>
+            <caption>常量</caption>
+            <tbody>
+              <tr>
+                <td><button type="button" value="E" class="const">$e$</button></td>
+                <td><button type="button" value="PI" class="const">$&pi;$</button></td>
+                <td><button type="button" value="LN2" class="const">$ln2$</button></td>
+                <td><button type="button" value="LN10" class="const">$ln10$</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- ctrl-constant -->
+      </div> <!-- calc-control -->
+
+      <div id="calc-log" class="group last">
+        <div id="running-result">
+          <table>
+            <tr>
+              <td><span id="result"></span></td>
+              <td>=</td>
+              <td><span id="equation"></span></td>
+            </tr>
+          </table>
+        </div>
+        <div id="memory">
+          <table>
+	    <caption>用 REM 保存的结果：</caption>
+            <thead>
+              <tr>
+                <td class="log-index">编号</td>
+                <td class="log-result">计算结果</td>
+                <td class="log-equation">计算式</td>
+              </tr>
+            </thead>
+	    <tbody id="log-entry">
+	    </tbody>
+          </table>
+        </div>
+      </div> <!-- calc-log -->
+
+    </div> <!-- main-wrapper -->
+
+    <script type="text/javascript"
+            src="js/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript"
+            src="js/jqmath-etc-0.2.0.min.js"></script>
+    <script type="text/javascript"
+	    src="js/jquery.poshytip.min.js"></script>
+    <script type="text/javascript" src="js/calc.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
